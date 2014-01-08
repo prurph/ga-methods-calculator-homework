@@ -11,21 +11,6 @@ end
 
 def two_num_operation(choice_array, choice)
   choice_array[0].send(choice, choice_array[1]) # Take first number, send method choice with second number as arg
-  # My original solution is below (used injects for flexibility for more numbers later on)
-  # But the above solution is much cleaner for two terms
-
-  # case choice
-  # when "+"
-  #   choice_array.inject() { |tot, val| tot + val }
-  # when "-"
-  #   choice_array.inject() { |tot, val| tot - val }
-  # when "*"
-  #   choice_array.inject() { |tot, val| tot * val }
-  # when "/"
-  #   choice_array.inject() { |tot, val| tot / val }
-  # else
-  #   "Not a valid operator"
-  # end
 end
 
 def factorial(number)
