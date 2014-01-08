@@ -22,10 +22,10 @@ def factorial(number)
 end
 
 def magic_trig_calc(number, func) # Gets func from one_num_operaton's choice
-  sin = (0..50).inject(0) do |sum, n|
+  sin = (0..1000).inject(0) do |sum, n|
     sum + (-1)**n * number**(2 * n + 1) / factorial(2 * n + 1)
   end
-  cos = (0..50).inject(0) do |sum, n|
+  cos = (0..1000).inject(0) do |sum, n|
     sum + (-1)**n * number**(2 * n) / factorial(2 * n)
   end
 
