@@ -22,10 +22,10 @@ def factorial(number)
 end
 
 def magic_trig_calc(number, func) # Gets func from one_num_operaton's choice
-  sin = (0..1000).inject(0) do |sum, n|
+  sin = (0..100).inject(0) do |sum, n|
     sum + (-1)**n * number**(2 * n + 1) / factorial(2 * n + 1)
   end
-  cos = (0..1000).inject(0) do |sum, n|
+  cos = (0..100).inject(0) do |sum, n|
     sum + (-1)**n * number**(2 * n) / factorial(2 * n)
   end
 
@@ -44,13 +44,13 @@ def one_num_operation(choice_array, choice)
   first = choice_array[0]
   case choice
   when "sq"
-    return first**2
+    first**2
   when "sqrt"
-    return first**0.5
+    first**0.5
   when "cube"
-    return first**3
+    first**3
   else # In this case user selected "sin", "cos" or "tan"
-    return magic_trig_calc(first, choice)
+    magic_trig_calc(first, choice)
   end
 end
 
